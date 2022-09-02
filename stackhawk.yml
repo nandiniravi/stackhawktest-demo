@@ -1,11 +1,11 @@
-# -- stackhawk configuration for StackHawkTest --
+# -- stackhawk configuration for stackhawktest-demo --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 04ebac21-746e-4163-a028-bd3fb974f8b2 # (required)
+  applicationId: 99313993-274d-4689-b61c-b32f59563f77 # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
   env: Development # (required)
   # -- The url of your application to scan --
-  host: https://nandiniravi.github.io/stackhawktest # (required)
+  host: https://nandiniravi.github.io/stackhawktest-demo # (required)
 
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --

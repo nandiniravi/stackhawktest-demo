@@ -18,8 +18,6 @@ pipeline {
       }
       steps {
         echo "hello world! 2"
-        mkdir "~\.hawk"
-        echo '$env:HAWK_API_KEY="hawk.ObHIhAiHte02lmPQTFov.lHymdViwtDBqkPcMISQN"' > $home\.hawk\hawk.ps1
         bat '''
           docker run -e API_KEY=$env:HAWK_API_KEY --rm -v ${PWD}:/hawk:rw -t stackhawk/hawkscan:latest
         '''

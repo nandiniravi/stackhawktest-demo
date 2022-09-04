@@ -17,6 +17,7 @@ pipeline {
         HAWK_API_KEY = credentials('HAWK_API_KEY')
       }
       steps {
+        echo "hello world! 2"
         sh '''
           docker run -v ${WORKSPACE}:/hawk:rw -t \
             -e API_KEY=${HAWK_API_KEY} \

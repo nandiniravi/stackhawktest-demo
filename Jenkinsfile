@@ -9,7 +9,7 @@ pipeline {
     stage ("Pull HawkScan Image") {
       steps {
         echo "hello world!"
-        sh 'docker pull stackhawk/hawkscan'
+        docker pull stackhawk/hawkscan
       }
     }
     stage ("Run HawkScan Test") {

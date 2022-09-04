@@ -8,6 +8,7 @@ pipeline {
     }
     stage ("Pull HawkScan Image") {
       steps {
+        echo "hello world!"
         sh 'docker pull stackhawk/hawkscan'
       }
     }

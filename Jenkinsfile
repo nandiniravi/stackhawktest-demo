@@ -18,7 +18,7 @@ pipeline {
       }
       steps {
         echo "hello world! 2"
-        sh '''
+        bat '''
           docker run -v ${WORKSPACE}:/hawk:rw -t \
             -e API_KEY=${HAWK_API_KEY} \
             -e NO_COLOR=true \

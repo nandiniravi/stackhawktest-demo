@@ -19,7 +19,7 @@ pipeline {
       steps {
         echo "hello world! 2"
         bat '''
-          docker run -e API_KEY=$env:HAWK_API_KEY --rm -v ${PWD}:/hawk:rw -t stackhawk/hawkscan:latest
+          docker run -e API_KEY=$env:HAWK_API_KEY --rm -v cd:/hawk:rw -t stackhawk/hawkscan:latest
         '''
       }
     }

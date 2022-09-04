@@ -8,7 +8,8 @@ pipeline {
     }
     stage ("Pull HawkScan Image") {
       steps {
-        sh 'docker pull stackhawk/hawkscan'
+        echo "hello world!"
+        bat 'docker pull stackhawk/hawkscan'
       }
     }
     stage ("Run HawkScan Test") {
@@ -16,11 +17,9 @@ pipeline {
         HAWK_API_KEY = credentials('HAWK_API_KEY')
       }
       steps {
-        sh '''
-          docker run -v ${WORKSPACE}:/hawk:rw -t \
-            -e API_KEY=${HAWK_API_KEY} \
-            -e NO_COLOR=true \
-            stackhawk/hawkscan
+        echo "hello world! 2"
+        bat '''
+          docker run -e API_KEY=$env:hawk.ObHIhAiHte02lmPQTFov.lHymdViwtDBqkPcMISQN --rm -v cd:/hawk:rw -t stackhawk/hawkscan:latest
         '''
       }
     }
